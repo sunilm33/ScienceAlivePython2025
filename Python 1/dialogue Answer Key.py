@@ -67,5 +67,5 @@ def main():
         print("Well you failed to get a quest, you'll have to keep searching now.")
   
 # Uncomment the next line to test the program           
-# main()
+main()
         
