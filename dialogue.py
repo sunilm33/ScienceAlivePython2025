@@ -65,6 +65,7 @@ def main():
         print("You are helping the townsperson! You got paid " + str(monetary_amount) + " silver coins!")
     else: 
         print("Well you failed to get a quest, you'll have to keep searching now.")
-            
-main()
+  
+# Uncomment the next line to test the program           
+# main()
         
