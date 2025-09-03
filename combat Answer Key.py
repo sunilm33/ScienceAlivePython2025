@@ -1,5 +1,7 @@
 import random
 import time
+
+# Global Variables
 actions = ["sword", "shield", "bow"]
 win = False
 
@@ -51,7 +53,11 @@ def main():
         print("1...")
         time.sleep(1)
         enemy_choice = random.choice(actions)
+
         player_choice = input("Are you going to choose sword, shield or bow? ")
+        while player_choice not in actions:
+            player_choice = input("Please select one of the three actions: sword, shield, bow. ")
+
         result = choose_winner(player_choice, enemy_choice)
         
         if result > 0:

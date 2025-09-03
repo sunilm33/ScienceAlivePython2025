@@ -55,6 +55,7 @@ def main():
         print(f"Welcome {player_name} to The Python Guild's Practice Dungeon. \nHere you will take on many monsters in order to train for the real thing. \nTime to enter the dungeon\n")
         time.sleep(1)
         print(f"A {enemy_name} appears!")
+        continue_game = False
 
 # def main():
 #     print("Welcome to fighting spirit! You will face a new enemy on each wave.")
