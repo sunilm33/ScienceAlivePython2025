@@ -49,9 +49,9 @@ def main():
             monetary_amount = 5
         elif dialogue_input == "C":
             print("I CANNOT AFFORD THAT. Final offer is 3 silver!") 
-            print(dialogue_2_options[0])
-            print(dialogue_2_options[1])
-            print(dialogue_2_options[2])
+            print(dialogue_3_options[0])
+            print(dialogue_3_options[1])
+            print(dialogue_3_options[2])
             dialogue_input = get_input()
             if dialogue_input == "A": 
                 print("Okay good, now go help me!")
