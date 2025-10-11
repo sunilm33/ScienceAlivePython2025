@@ -7,6 +7,17 @@ dialogue_2_options = ["A. That works for me.",
 dialogue_3_options = ["A. Okay 3 it is.",
                       "B. No that is way too low.",
                       "C. Good riddance, I can't do that price."]
+npc_options = ["Hello Adventurer. I need help with clearing the rats out of my cellar.",
+               "In. My. Cellar.\nI can pay you 2 silver to do it.", 
+               "Oh I dont have too much money, I can pay 3 silver coins.", 
+               "Thank you, now please go clear them out!",
+               "Oh well I can use my kids savings and get that money. I really need these rats gone.",
+                "I CANNOT AFFORD THAT. Final offer is 3 silver!",
+                "Okay good, now go help me!",
+                "Good luck with your life, I'll find a more reasonable person soon enough."
+               ]
+
+
 def get_input():
     return input("Please input A, B or C and press enter to choose your option. ")
 
@@ -16,14 +27,14 @@ def main():
     accepted_quest = False 
     ask_for_money = False
     monetary_amount = 0
-    print(f"Hello Adventurer. I need help with clearing the rats out of my cellar.")
+    print(npc_options[0])
     print(dialogue_1_options[0])
     print(dialogue_1_options[1])
     print(dialogue_1_options[2])
     dialogue_input = get_input()
 
     if dialogue_input == "A":
-        print("In. My. Cellar.\nI can pay you 2 silver to do it.")
+        print(npc_options[1])
         monetary_amount = 2  
         ask_for_money = True
         accepted_quest = True
@@ -31,7 +42,7 @@ def main():
         accepted_quest = False
     elif dialogue_input == "C":
         ask_for_money = True
-        print("Oh I dont have too much money, I can pay 3 silver coins.")
+        print(npc_options[2])
         monetary_amount = 3 
 
     if ask_for_money:
@@ -41,24 +52,24 @@ def main():
         dialogue_input = get_input()
 
         if dialogue_input == "A":
-            print("Thank you, now please go clear them out!")
+            print(npc_options[3])
             accepted_quest = True
         elif dialogue_input == "B":
-            print("Oh well I can use my kids savings and get that money. I really need these rats gone.")
+            print(npc_options[4])
             accepted_quest = True
             monetary_amount = 5
         elif dialogue_input == "C":
-            print("I CANNOT AFFORD THAT. Final offer is 3 silver!") 
+            print(npc_options[5]) 
             print(dialogue_3_options[0])
             print(dialogue_3_options[1])
             print(dialogue_3_options[2])
             dialogue_input = get_input()
             if dialogue_input == "A": 
-                print("Okay good, now go help me!")
+                print(npc_options[6])
                 monetary_amount = 3
                 accepted_quest = True
             elif dialogue_input == "B" or dialogue_input == "C":
-                print("Good luck with your life, I'll find a more reasonable person soon enough.")
+                print(npc_options[7])
                 accepted_quest = False
 
     if accepted_quest:
