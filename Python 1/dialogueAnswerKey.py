@@ -23,8 +23,7 @@ def get_input():
 
 def main():
     # Dialogue Tree
-    # Here we are going to demo how to talk and start quests
-    accepted_quest = False 
+    # Here we are going to demo how to talk and start quests 
     ask_for_money = False
     monetary_amount = 0
     print(npc_options[0])
@@ -33,6 +32,7 @@ def main():
     print(dialogue_1_options[2])
     dialogue_input = get_input()
 
+    accepted_quest = False
     if dialogue_input == "A":
         print(npc_options[1])
         monetary_amount = 2  
